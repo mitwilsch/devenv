@@ -13,5 +13,9 @@ RUN sh install.sh --unattended
 RUN git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime 
 RUN sh ~/.vim_runtime/install_awesome_vimrc.sh
 
+# copy configs
+COPY ./zshrc ./.zshrc
+COPY ./vimrc ./.vimrc
+
 CMD ["zsh"]
 
