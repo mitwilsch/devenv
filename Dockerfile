@@ -8,6 +8,7 @@ RUN apk add vim wget zsh git npm
 # install custom zsh
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh 
 RUN sh install.sh --unattended
+RUN rm install.sh
 
 # install custom zsh
 RUN git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime 
