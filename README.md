@@ -17,6 +17,13 @@ doker run -it devenv:latest
 
 You will now be in the shell with custom zsh, vim, etc installed
 
+To run with local dir mapped:
+
+docker run -it  --mount src="$(pwd)/ext",target=/root/ext,type=bind devenv:latest
+
+Where src is directory on home, target is within container. Depending on dir name, may need to be surrounded in quotes. Shell commands with '$()' can be used.
+
+Better way to do this is with docker compose, not viable yet. 
 
 # todo:
  - [] custom scripts from various bin files
