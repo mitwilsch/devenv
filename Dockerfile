@@ -3,7 +3,7 @@ FROM alpine:latest
 WORKDIR /root
 
 RUN apk update
-RUN apk add vim wget zsh git npm
+RUN apk add vim wget zsh git npm 
 
 # install custom zsh
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh 
